@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/apel/apel:
+      branch: dev
+      repo: https://github.com/apel/apel.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/apel/apel git:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-mauve-audemer.sh
+        container: qc.acc_goopy-teal-goat
+  QC.Doc:
+    repos:
+      github.com/apel/apel find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-sepia-badger.sh
+        container: qc.doc_crabby-linen-hamster
+      github.com/apel/apel git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-pumpkin-camel.sh
+        container: qc.doc_greasy-harlequin-quokka
+      github.com/apel/apel markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-salmon-skunk.sh
+        container: qc.doc_shaggy-magenta-lizard
+  QC.Lic:
+    repos:
+      github.com/apel/apel licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-aqua-caiman.sh
+        container: qc.lic_grumpy-wheat-wolf
+  QC.Sec:
+    repos:
+      github.com/apel/apel bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-white-ladybird.sh
+        container: qc.sec_pokey-sapphire-terrier
+  QC.Sty:
+    repos:
+      github.com/apel/apel flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-tan-sloth.sh
+        container: qc.sty_smelly-asparagus-lion
+  QC.Uni:
+    repos:
+      github.com/apel/apel pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-lime-neanderthal.sh
+        container: qc.uni_cozy-zucchini-emu
+  QC.Ver:
+    repos:
+      github.com/apel/apel get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-wheat-dachsbracke.sh
+        container: qc.ver_freaky-amethyst-mayfly
+timeout: 5400
