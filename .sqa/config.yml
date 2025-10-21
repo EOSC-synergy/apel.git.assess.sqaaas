@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/apel/apel git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-gamboge-peccary.sh
-        container: qc.acc_cranky-zucchini-gharial
+        - /usr/bin/env sh .sqa/script.beady-persimmon-hound.sh
+        container: qc.acc_ugly-amber-caiman
   QC.Doc:
     repos:
       github.com/apel/apel find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-flax-mist.sh
-        container: qc.doc_scanty-aqua-monster
+        - /usr/bin/env sh .sqa/script.sickly-celadon-bison.sh
+        container: qc.doc_gimpy-cream-frog
       github.com/apel/apel git:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-cinnamon-ragdoll.sh
-        container: qc.doc_fuzzy-violet-ferret
+        - /usr/bin/env sh .sqa/script.frumpy-heliotrope-tang.sh
+        container: qc.doc_gimpy-turquoise-bracke
       github.com/apel/apel markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-beige-chin.sh
-        container: qc.doc_sickly-ruby-pinscher
+        - /usr/bin/env sh .sqa/script.crappy-apricot-walrus.sh
+        container: qc.doc_sleepy-chestnut-foxhound
   QC.Lic:
     repos:
       github.com/apel/apel licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-xanthic-dhole.sh
-        container: qc.lic_muzzy-mauve-eagle
+        - /usr/bin/env sh .sqa/script.flaky-dandelion-olm.sh
+        container: qc.lic_scaly-mauve-goat
   QC.Sec:
     repos:
       github.com/apel/apel bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-buff-caiman.sh
-        container: qc.sec_grumpy-peach-fly
+        - /usr/bin/env sh .sqa/script.shaky-myrtle-whale.sh
+        container: qc.sec_sleepy-mustard-fousek
   QC.Sty:
     repos:
       github.com/apel/apel flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-corn-flamingo.sh
-        container: qc.sty_snazzy-grey-corgi
+        - /usr/bin/env sh .sqa/script.skinny-heliotrope-baboon.sh
+        container: qc.sty_tacky-amethyst-ferret
   QC.Uni:
     repos:
       github.com/apel/apel pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-salmon-turkey.sh
-        container: qc.uni_foggy-tangerine-abyssinian
+        - /usr/bin/env sh .sqa/script.scanty-burgundy-pinscher.sh
+        container: qc.uni_trippy-dandelion-lobster
   QC.Ver:
     repos:
       github.com/apel/apel get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-wheat-impala.sh
-        container: qc.ver_clammy-corn-otter
+        - /usr/bin/env sh .sqa/script.pasty-wheat-wolverine.sh
+        container: qc.ver_baggy-dandelion-labradoodle
 timeout: 5400
