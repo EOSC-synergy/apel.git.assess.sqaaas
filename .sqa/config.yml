@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/apel/apel:
       branch: dev
@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/apel/apel git:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-persimmon-hound.sh
-        container: qc.acc_ugly-amber-caiman
+        - /usr/bin/env sh .sqa/script.teal_practical_ocelot.sh
+        container: qc.acc_tundra_harmonious_griffin
   QC.Doc:
     repos:
       github.com/apel/apel find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-celadon-bison.sh
-        container: qc.doc_gimpy-cream-frog
+        - /usr/bin/env sh .sqa/script.dawn_fearless_ibis.sh
+        container: qc.doc_paprika_organized_chimpanzee
       github.com/apel/apel git:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-heliotrope-tang.sh
-        container: qc.doc_gimpy-turquoise-bracke
+        - /usr/bin/env sh .sqa/script.cinnabar_diplomatic_goat.sh
+        container: qc.doc_cloud_bold_swan
       github.com/apel/apel markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-apricot-walrus.sh
-        container: qc.doc_sleepy-chestnut-foxhound
+        - /usr/bin/env sh .sqa/script.navy_energetic_badger.sh
+        container: qc.doc_chili_vibrant_fox
   QC.Lic:
     repos:
       github.com/apel/apel licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-dandelion-olm.sh
-        container: qc.lic_scaly-mauve-goat
+        - /usr/bin/env sh .sqa/script.caramel_artistic_caribou.sh
+        container: qc.lic_lavender_playful_weasel
   QC.Sec:
     repos:
       github.com/apel/apel bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-myrtle-whale.sh
-        container: qc.sec_sleepy-mustard-fousek
+        - /usr/bin/env sh .sqa/script.cerulean_dreamy_raccoon.sh
+        container: qc.sec_umber_rugged_caiman
   QC.Sty:
     repos:
       github.com/apel/apel flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-heliotrope-baboon.sh
-        container: qc.sty_tacky-amethyst-ferret
+        - /usr/bin/env sh .sqa/script.forest_enthusiastic_ferret.sh
+        container: qc.sty_grape_helpful_moose
   QC.Uni:
     repos:
       github.com/apel/apel pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-burgundy-pinscher.sh
-        container: qc.uni_trippy-dandelion-lobster
+        - /usr/bin/env sh .sqa/script.purple_artistic_jellyfish.sh
+        container: qc.uni_coffee_confused_giraffe
   QC.Ver:
     repos:
       github.com/apel/apel get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-wheat-wolverine.sh
-        container: qc.ver_baggy-dandelion-labradoodle
+        - /usr/bin/env sh .sqa/script.mustard_upbeat_dormouse.sh
+        container: qc.ver_ceru_reflective_jellyfish
 timeout: 5400
